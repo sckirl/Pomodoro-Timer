@@ -10,8 +10,8 @@ const themesExit = document.getElementById("themes-exit");
 
 // JS stuff
 let userSettings = {
-  focusMinutes: 0,
-  restMinutes: 0,
+  focusMinutes: 60,
+  restMinutes: 5,
 };
 
 let minutes = userSettings["focusMinutes"];
