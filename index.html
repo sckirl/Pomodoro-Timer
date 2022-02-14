@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro</title>
+
+    <link rel="icon" type="image/x-icon" href="https://www.pinclipart.com/picdir/big/178-1788258_image-result-for-free-green-clock-icon-green.png">
+
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+
+<body style="background-color: var(--background)">
+    <nav class="navbar navbar-dark navbar-theme">
+            <a class="navbar-theme" href="#"> Pomodoro Timer </a>
+            
+            <a class="navbar-theme" id="themes" href="#"> Themes </a>
+    </nav>
+
+    <!-- Hidden Toast, show this before and after rest -->
+    <div id="toast"> </div>
+
+    <div class="container">
+        <!-- Pre-made themes that user can switch to -->
+        <div id="themes-window">
+            <button id="themes-exit"> X </button>
+            
+            <button class="theme-buttons button" id="default"> Default </button>
+            <button class="theme-buttons button" id="olivia"> Olivia </button>
+    
+        </div> 
+
+        <span id="timer">  </span>
+
+        <button id="startButton" class="button"> Start </button>
+        <button id="resetButton" class="button"> Reset </button>
+    </div>
+    
+    <script type="module" src="./ChooseThemes.js"> </script>
+    <script type="module" src="./index.js"> </script>
+</body>
+</html>

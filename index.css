@@ -1,0 +1,215 @@
+:root {
+    --_primary: black;
+    --_secondary: limegreen;
+
+    --background: rgb(80, 80, 80);
+    --font: monospace;
+}
+
+.navbar-theme {
+    color: var(--_secondary);
+    text-decoration: none;
+    font-family: var(--font);
+    font-size: 25px;
+
+    background-color: var(--_primary);
+}
+
+.navbar-theme:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.container {
+    position: relative;
+    height: 150px;
+}
+
+#timer {
+    width: 400px;
+    height: 200px;
+
+    background-color: var(--_primary);
+    border-radius: 70px;
+
+    /* Center the timer */
+    margin: 0;
+    position: relative;
+    top: 40%;
+    left: 50%;
+    -ms-transform: translate(-50%);
+    transform: translate(-50%);
+
+    /* Center the text */
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    color: var(--_secondary);
+    margin: 0;
+
+    font-family: var(--font);
+    font-size: 50px;
+}
+
+#timer.rest {
+    background-color: var(--_secondary);
+    color: var(--_primary);
+}
+
+.button {
+    width: auto;
+    height: auto;
+
+    position: relative;
+    top: 50%;
+    
+    /* Center the text */
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    margin: 5px auto;
+
+    background-color: var(--_primary);
+    color: var(--_secondary);
+    font-family: var(--font);
+    font-size: 15px;
+    border-radius: 20px;
+}
+
+#startButton:hover {
+    text-decoration: none;
+    color: white;
+}
+
+/* Toast for session change notifications */
+#toast {
+    visibility: hidden;
+
+    width: 200px;
+    height: 60px;
+
+    position: fixed;
+
+    /* Center the text */
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    margin: 5px auto;
+    text-align: center;
+
+    /* Center the box */
+    margin: 0;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%);
+
+    color: var(--_primary);
+    font-family: var(--font);
+    background-color: var(--_secondary);
+    border-radius: 20px;
+}
+
+#toast.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 3s;
+    animation: fadein 0.5s, fadeout 0.5s 3s;
+}
+
+#themes-window {
+    visibility: hidden;
+
+    width: 500px;
+    height: 250px;
+
+    position: fixed;
+    z-index: 1;
+
+    /* Center the text */
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    margin: 5px auto;
+    text-align: center;
+
+    /* Center the box */
+    margin: 0;
+    top: 20%;
+    left: 50%;
+    -ms-transform: translate(-50%);
+    transform: translate(-50%);
+
+    opacity: 0.95;
+    color: var(--_primary);
+    font-family: var(--font);
+    background-color: gray;
+    border-radius: 20px;
+}
+
+#themes-window.show {
+    visibility: visible;
+}
+
+#themes-exit {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+
+    left: 90%;
+    top: 5%;
+
+    background-color: var(--_primary);
+    color: var(--_secondary);
+    font-family: var(--font);
+    font-size: auto;
+    border-radius: 20px;
+
+    text-align: center;
+}
+
+.theme-buttons {
+    margin: 50px;
+    position: relative;
+
+    /* Center the text */
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    margin: 5px auto;
+
+    top: 0;
+}
+
+@-webkit-keyframes fadein {
+  from {top: 0px; opacity: 0;}
+  to {top: 20px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {top: 0px; opacity: 0;}
+  to {top: 20px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {top: 20px; opacity: 1;}
+    to {top: 0px; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {top: 20px; opacity: 1;}
+    to {top: 0px; opacity: 0;}
+}
+
+/* ---------- Theme's Button Colors ---------- */
+#default {
+    background-color: black;
+    color: limegreen;
+
+    font-weight: bold;
+}
+
+#olivia {
+    background-color: white;
+    color: rgb(204, 158, 165);
+
+    font-weight: bold;
+}
